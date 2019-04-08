@@ -805,7 +805,7 @@
 
 .ion-ios-list:before { content: "\f454"; }
 
-.ion-ios-list-outline:before { content: "\f453"; }
+.ion-ios--outline:before { content: "\f453"; }
 
 .ion-ios-location:before { content: "\f456"; }
 
