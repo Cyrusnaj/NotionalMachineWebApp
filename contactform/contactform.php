@@ -20,7 +20,7 @@
   $contact_error_name = "Name is too short or empty!";
   $contact_error_email = "Please enter a valid email!";
   $contact_error_subject = "Subject is too short or empty!";
-  $contact_error_message = "=Please enter a message.";
+  $contact_error_message = "Please enter a message.";
 
 /********** Do not edit from the below line ***********/
 
