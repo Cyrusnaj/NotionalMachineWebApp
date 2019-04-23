@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Loops</title>
+  <title>Variables and Datatypes</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -75,7 +75,7 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="intro-title mb-4">Loops</h2>
+          <h2 class="intro-title mb-4">Variables and Datatypes</h2>
           <ol class="breadcrumb d-flex justify-content-center">
             <!--<li class="breadcrumb-item">
               <a href="#">Home</a>
@@ -100,11 +100,11 @@
     </div>
 
     <p class="lead">
-      Notional Trace is a web application designed to help novice programmers learn how computers execute particular pieces of code.
-      Often times, students struggle with introductory programming courses (whether it be at the middle school, high school, or college level).
-      Much of the difficulty comes down to not having a mental model of how a piece of code produces desired output.
+      While it's nice being able to write output to the console, we want to be able to build programs that actually do things. To make this happen,
+      we're going to have to create variables to handle data. Every variable has a specific datatype which identifies what specifically can be stored
+      inside that particular variable. This module will allow you to create variables so that your programs can actually come to life.
     </p>
-    <p class="lead">
+    <!--<p class="lead">
       Our goal with Notional Trace is to help students build a notional machine. A notional machine is basically just a mental model of
       program execution from the computer’s standpoint. Having a strong notional machine will enable students to become faster, more efficient
       programmers, and will make coding a more enjoyable practice.
@@ -114,7 +114,7 @@
       Various studies have been conducted proving the effectiveness that code tracing has on introductory programming concepts,
       therefore that’s the route we will take within our learning modules. Ultimately, we hope to help students become better programmers,
       and ultimately broaden participation in computing.
-    </p>
+    </p>-->
   </div>
 
   <div class="slides">
@@ -126,7 +126,7 @@
     </div>
 
 <p align="center">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCXt3qoj314IVPccmpcydizCgZYxAT_OrJqAmpP6ewX6CbEf9H8CdpYBgeUropI3qoUsc3QOdyvv3F/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS9EStGuQwv-P1wQ98wS2Wk4IQWn5Sc5fNjNOx6geXbRY651arffNwZZotszOozsRof2zRTQMC7fQBX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </p>
 
 <div class="about">
@@ -196,7 +196,7 @@
         numCorrect++;
 
         // color the answers green
-        answerContainers[questionNumber].style.color = "lightgreen";
+        answerContainers[questionNumber].style.color = "limegreen";
       } else {
         // if answer is wrong or blank
         // color the answers red
@@ -205,7 +205,7 @@
     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = `Score: ${numCorrect} out of ${myQuestions.length}`;
   }
 
   const quizContainer = document.getElementById("quiz");
@@ -213,33 +213,101 @@
   const submitButton = document.getElementById("submit");
   const myQuestions = [
     {
-      question: "Who is the strongest?",
+      question: "Use the grid method to determine the value of int 'a' from the practice problem on slide 13.",
       answers: {
-        a: "Superman",
-        b: "The Terminator",
-        c: "Waluigi, obviously"
+        a: "29",
+        b: "32",
+        c: "37",
+        d: "40"
       },
       correctAnswer: "c"
     },
     {
-      question: "What is the best site ever created?",
+      question: "Use the grid method to determine the value of int 'b' from the practice problem on slide 13.",
       answers: {
-        a: "SitePoint",
-        b: "Simple Steps Code",
-        c: "Trick question; they're both the best"
+        a: "8",
+        b: "9",
+        c: "12",
+        d: "18"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Use the grid method to determine the value of int 'c' from the practice problem on slide 13.",
+      answers: {
+        a: "8",
+        b: "9",
+        c: "12",
+        d: "18"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "True or false: While loops will continue to execute until its condition is false",
+      answers: {
+        a: "True",
+        b: "False"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What expression must be added to a while loop in order for it to act like a for loop?",
+      answers: {
+        a: "Initialization expression",
+        b: "Control expression",
+        c: "Increment expression"
       },
       correctAnswer: "c"
     },
     {
-      question: "Where is Waldo really?",
+      question: "Which statement is checked before the code inside the loop is executed?",
       answers: {
-        a: "Antarctica",
-        b: "Exploring the Pacific Ocean",
-        c: "Sitting in a tree",
-        d: "Minding his own business, so stop asking"
+        a: "Initialization expression",
+        b: "Control expression",
+        c: "Increment expression"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "How many iterations will the following loop go through: for(int i = 0; i < 25; i++)",
+      answers: {
+        a: "23",
+        b: "24",
+        c: "25",
+        d: "26"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "How many iterations will the following loop go through: for(int i = 0; i ≤ 25; i++)",
+      answers: {
+        a: "23",
+        b: "24",
+        c: "25",
+        d: "26"
       },
       correctAnswer: "d"
-    }
+    },
+    {
+      question: "How many iterations will the following loop go through: for(int i = 1; i < 25; i++)",
+      answers: {
+        a: "23",
+        b: "24",
+        c: "25",
+        d: "26"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "How many iterations will the following loop go through: for(int i = 0; i < 25; i--)",
+      answers: {
+        a: "24",
+        b: "25",
+        c: "26",
+        d: "Infinite"
+      },
+      correctAnswer: "d"
+    },
   ];
 
   // display quiz right away
