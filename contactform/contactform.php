@@ -1,13 +1,5 @@
 <?php
-/*
-  PHP contact form script
-  Version: 1.1
-  Copyrights BootstrapMade.com
-*/
 
-/***************** Configuration *****************/
-
-  // Replace with your real receiving email address
   $contact_email_to = "cyrusnajmi@gmail.com";
 
   // Title prefixes
@@ -22,7 +14,6 @@
   $contact_error_subject = "Subject is too short or empty!";
   $contact_error_message = "Please enter a message.";
 
-/********** Do not edit from the below line ***********/
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
     die('Sorry Request must be Ajax POST');
